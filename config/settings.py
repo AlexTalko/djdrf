@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'users',
     'materials',
 
-    'vehicle',
+
 
 ]
 
