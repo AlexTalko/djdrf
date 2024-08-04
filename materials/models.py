@@ -27,6 +27,8 @@ class Lesson(models.Model):
     link = models.URLField(max_length=300, verbose_name='ссылка на видео', help_text='Укажите ссылку', **NULLABLE)
     course = models.ForeignKey('Course', on_delete=models.SET_NULL, verbose_name='Название курса',
                                help_text='Выберите курс', **NULLABLE)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE, verbose_name="Автор")
+
 
     def __str__(self):
         return self.title
