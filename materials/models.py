@@ -1,6 +1,7 @@
+from django.conf import settings
 from django.db import models
 
-from users.models import NULLABLE
+NULLABLE = {'blank': True, 'null': True}
 
 
 class Course(models.Model):
@@ -8,6 +9,7 @@ class Course(models.Model):
     image = models.ImageField(upload_to='course/images', verbose_name='картинка',
                               help_text='Добавьте превью изображения', **NULLABLE)
     description = models.TextField(verbose_name='описание курса', help_text='Укажите описание курса')
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE, verbose_name="Автор")
 
     def __str__(self):
         return self.title
