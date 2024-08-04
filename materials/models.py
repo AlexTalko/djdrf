@@ -29,7 +29,6 @@ class Lesson(models.Model):
                                help_text='Выберите курс', **NULLABLE)
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE, verbose_name="Автор")
 
-
     def __str__(self):
         return self.title
 
