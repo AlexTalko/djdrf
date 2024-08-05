@@ -17,6 +17,10 @@ class Course(models.Model):
     class Meta:
         verbose_name = 'курс'
         verbose_name_plural = 'курсы'
+        permissions = [
+            ('can_view_course', 'Может просматривать курсы'),
+            ('can_edit_course', 'Может редактировать курсы'),
+        ]
 
 
 class Lesson(models.Model):
@@ -35,3 +39,7 @@ class Lesson(models.Model):
     class Meta:
         verbose_name = 'урок'
         verbose_name_plural = 'уроки'
+        permissions = [
+            ('can_view_lesson', 'Может просматривать уроки'),
+            ('can_edit_lesson', 'Может редактировать уроки'),
+        ]

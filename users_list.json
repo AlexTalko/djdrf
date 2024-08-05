@@ -1,0 +1,106 @@
+[
+{
+  "model": "users.user",
+  "pk": 3,
+  "fields": {
+    "password": "test123456",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Владимир",
+    "last_name": "Прист",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-30T12:47:28Z",
+    "email": "pristanskyvs@mail.ru",
+    "phone": null,
+    "city": null,
+    "avatar": "",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "Петр",
+    "last_name": "Петровский",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-07-30T12:47:58.810Z",
+    "email": "roddelt@mail.ru",
+    "phone": null,
+    "city": null,
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$2suVqbHWga3hAghlz6UwNm$scAZDurZ6470flkiQt0R92o7HvQyGBECJLI0MqvnIKs=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-03T08:21:31.540Z",
+    "email": "test@test.com",
+    "phone": null,
+    "city": null,
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$0nm6JJ9jT6LdYG2005cJPA$sojh/6PCAD2fw5QE/x59JhcXdY4rQ4QWfWoYUbX5PBM=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-04T06:17:44Z",
+    "email": "proba@proba.com",
+    "phone": null,
+    "city": null,
+    "avatar": "",
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$mFmVkEgo6OVbXhy48Xf6G8$/la4i4yMBJhP2U6o10i7BXAcx2FUC4xPkJdFjLqyLgw=",
+    "last_login": null,
+    "is_superuser": false,
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-08-04T07:07:41.967Z",
+    "email": "proba2@proba.com",
+    "phone": null,
+    "city": null,
+    "avatar": "",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
