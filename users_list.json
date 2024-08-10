@@ -1,106 +1,170 @@
 [
-{
-  "model": "users.user",
-  "pk": 3,
-  "fields": {
-    "password": "test123456",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "Владимир",
-    "last_name": "Прист",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2024-07-30T12:47:28Z",
-    "email": "pristanskyvs@mail.ru",
-    "phone": null,
-    "city": null,
-    "avatar": "",
-    "groups": [
-      1
-    ],
-    "user_permissions": []
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$Nms6meBPa89O1VBzBfpNRv$o0c3Ox48JfXu+OCK2BF3Ztd4646QIyzFGqP4EiPFxaA=",
+      "last_login": null,
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-08-05T06:33:35.941Z",
+      "email": "admin@admin.com",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 3,
+    "fields": {
+      "password": "test123456",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Владимир",
+      "last_name": "Прист",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-30T12:47:28Z",
+      "email": "pristanskyvs@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 4,
+    "fields": {
+      "password": "",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "Петр",
+      "last_name": "Петровский",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-07-30T12:47:58.810Z",
+      "email": "roddelt@mail.ru",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$2suVqbHWga3hAghlz6UwNm$scAZDurZ6470flkiQt0R92o7HvQyGBECJLI0MqvnIKs=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-08-03T08:21:31.540Z",
+      "email": "test@test.com",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$0nm6JJ9jT6LdYG2005cJPA$sojh/6PCAD2fw5QE/x59JhcXdY4rQ4QWfWoYUbX5PBM=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-08-04T06:17:44Z",
+      "email": "proba@proba.com",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [
+        1
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 10,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$mFmVkEgo6OVbXhy48Xf6G8$/la4i4yMBJhP2U6o10i7BXAcx2FUC4xPkJdFjLqyLgw=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-08-04T07:07:41.967Z",
+      "email": "proba2@proba.com",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$C2O2eJsbxFuRtaDBESXDaL$PqxFnPDpGsiU7xCHQp6OWR5PFxoqzPfDXraJdcNIvOg=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-08-05T10:06:21.808Z",
+      "email": "user@test.com",
+      "phone": null,
+      "avatar": "",
+      "city": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "date_payment": "2024-07-31T10:48:08.255Z",
+      "lesson_paid": 3,
+      "course_paid": null,
+      "amount": "10500.00",
+      "payment_type": "cash"
+    }
+  },
+  {
+    "model": "users.payment",
+    "pk": 3,
+    "fields": {
+      "user": 4,
+      "date_payment": "2024-07-31T10:50:33.379Z",
+      "lesson_paid": null,
+      "course_paid": 2,
+      "amount": "15999.99",
+      "payment_type": "transfer"
+    }
   }
-},
-{
-  "model": "users.user",
-  "pk": 4,
-  "fields": {
-    "password": "",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "Петр",
-    "last_name": "Петровский",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2024-07-30T12:47:58.810Z",
-    "email": "roddelt@mail.ru",
-    "phone": null,
-    "city": null,
-    "avatar": "",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "users.user",
-  "pk": 6,
-  "fields": {
-    "password": "pbkdf2_sha256$720000$2suVqbHWga3hAghlz6UwNm$scAZDurZ6470flkiQt0R92o7HvQyGBECJLI0MqvnIKs=",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "",
-    "last_name": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2024-08-03T08:21:31.540Z",
-    "email": "test@test.com",
-    "phone": null,
-    "city": null,
-    "avatar": "",
-    "groups": [],
-    "user_permissions": []
-  }
-},
-{
-  "model": "users.user",
-  "pk": 9,
-  "fields": {
-    "password": "pbkdf2_sha256$720000$0nm6JJ9jT6LdYG2005cJPA$sojh/6PCAD2fw5QE/x59JhcXdY4rQ4QWfWoYUbX5PBM=",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "",
-    "last_name": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2024-08-04T06:17:44Z",
-    "email": "proba@proba.com",
-    "phone": null,
-    "city": null,
-    "avatar": "",
-    "groups": [
-      1
-    ],
-    "user_permissions": []
-  }
-},
-{
-  "model": "users.user",
-  "pk": 10,
-  "fields": {
-    "password": "pbkdf2_sha256$720000$mFmVkEgo6OVbXhy48Xf6G8$/la4i4yMBJhP2U6o10i7BXAcx2FUC4xPkJdFjLqyLgw=",
-    "last_login": null,
-    "is_superuser": false,
-    "first_name": "",
-    "last_name": "",
-    "is_staff": false,
-    "is_active": true,
-    "date_joined": "2024-08-04T07:07:41.967Z",
-    "email": "proba2@proba.com",
-    "phone": null,
-    "city": null,
-    "avatar": "",
-    "groups": [],
-    "user_permissions": []
-  }
-}
 ]

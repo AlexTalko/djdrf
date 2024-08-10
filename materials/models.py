@@ -10,6 +10,7 @@ class Course(models.Model):
                               help_text='Добавьте превью изображения', **NULLABLE)
     description = models.TextField(verbose_name='описание курса', help_text='Укажите описание курса')
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE, verbose_name="Автор")
+    link = models.URLField(max_length=300, verbose_name="ссылка на видео", help_text="Укажите ссылку", **NULLABLE)
 
     def __str__(self):
         return self.title
@@ -43,3 +44,15 @@ class Lesson(models.Model):
             ('can_view_lesson', 'Может просматривать уроки'),
             ('can_edit_lesson', 'Может редактировать уроки'),
         ]
+
+
+class Subscription(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, verbose_name="Пользователь")
+    course = models.ForeignKey('Course', on_delete=models.CASCADE, verbose_name='Курс')
+
+    def __str__(self):
+        return f'{self.user.email} - {self.course.title}'
+
+    class Meta:
+        verbose_name = 'подписка'
+        verbose_name_plural = 'подписки'
