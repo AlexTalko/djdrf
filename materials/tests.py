@@ -11,9 +11,10 @@ class CourseTestCase(APITestCase):
 
     def setUp(self):
         self.user = User.objects.create(email='apitest@apitest.com')
-        self.course = Course.objects.create(title='Test Course', description='Test Course', owner=self.user)
+        self.course = Course.objects.create(title='Test Course', description='Test Course', owner=self.user,
+                                            link='youtube.com', )
         self.lesson = Lesson.objects.create(title='Test Lesson', description='Test Lesson', course=self.course,
-                                            owner=self.user)
+                                            owner=self.user, link='youtube.com', )
         self.client.force_authenticate(user=self.user)
 
     def test_course_retrieve(self):
@@ -33,6 +34,8 @@ class CourseTestCase(APITestCase):
             'title': 'Test Course 2',
             'description': 'Test Course 2',
             'owner': self.user.pk,
+            'link': 'youtube.com',
+
         }
         response = self.client.post(url, data=data)
         print(response.json())
@@ -76,9 +79,10 @@ class CourseTestCase(APITestCase):
 class LessonTestCase(APITestCase):
     def setUp(self):
         self.user = User.objects.create(email='apitest@apitest.com')
-        self.course = Course.objects.create(title='Test Course', description='Test Course', owner=self.user)
+        self.course = Course.objects.create(title='Test Course', description='Test Course', owner=self.user,
+                                            link='youtube.com', )
         self.lesson = Lesson.objects.create(title='Test Lesson', description='Test Lesson', course=self.course,
-                                            owner=self.user)
+                                            owner=self.user, link='youtube.com', )
         self.client.force_authenticate(user=self.user)
 
     def test_lesson_retrieve(self):
@@ -93,11 +97,13 @@ class LessonTestCase(APITestCase):
         )
 
     def test_lesson_create(self):
+        # url = reverse("materials:lesson_list")
         data = {
             'title': 'Test Lesson 2',
             'description': 'Test Lesson 2',
             'course': self.course.pk,
             'owner': self.user.pk,
+            'link': 'youtube.com'
         }
         response = self.client.post('/lesson/create/', data=data)
         print(response.json())
