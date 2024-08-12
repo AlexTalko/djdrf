@@ -79,16 +79,25 @@ REST_FRAMEWORK = {
     ),
 }
 
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:8000',  # Замените на адрес вашего фронтенд-сервера
+# ]
+#
+# CSRF_TRUSTED_ORIGINS = [
+#     "https://read-and-write.example.com",  # Замените на адрес вашего фронтенд-сервера
+#     # и добавьте адрес бэкенд-сервера
+# ]
+#
+# CORS_ALLOW_ALL_ORIGINS = False
+
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:8000',  # Замените на адрес вашего фронтенд-сервера
+    "https://read-only.example.com",
+    "https://read-and-write.example.com",
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://read-and-write.example.com",  # Замените на адрес вашего фронтенд-сервера
-    # и добавьте адрес бэкенд-сервера
+    "https://read-and-write.example.com",
 ]
-
-CORS_ALLOW_ALL_ORIGINS = False
 
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases

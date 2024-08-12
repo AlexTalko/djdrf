@@ -5,7 +5,9 @@ from materials.validators import validate_link
 
 
 class LessonSerializer(serializers.ModelSerializer):
-    link = serializers.URLField(validators=[validate_link], read_only=True)
+    link = serializers.URLField(validators=[validate_link],)
+    is_subscribed = serializers.SerializerMethodField()
+
 
     class Meta:
         model = Lesson
