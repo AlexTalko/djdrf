@@ -6,12 +6,6 @@ from materials.validators import validate_link
 
 class LessonSerializer(serializers.ModelSerializer):
     link = serializers.URLField(validators=[validate_link], )
-    is_subscribed = serializers.SerializerMethodField()
-
-    def get_is_subscribed(self, obj):
-        user = self.context['request'].user
-        return Subscription.objects.all().filter(user=user, course=obj).exists()
-
 
     class Meta:
         model = Lesson
@@ -22,6 +16,7 @@ class CourseSerializer(serializers.ModelSerializer):
     lesson_count = serializers.SerializerMethodField(read_only=True)
     lesson = LessonSerializer(source='lesson_set', many=True, read_only=True)
     link = serializers.URLField(validators=[validate_link], )
+    is_subscribed = serializers.SerializerMethodField()
 
     class Meta:
         model = Course

@@ -34,7 +34,7 @@ class CourseTestCase(APITestCase):
             'title': 'Test Course 2',
             'description': 'Test Course 2',
             'owner': self.user.pk,
-            'link': 'youtube.com',
+            'link': 'https://www.youtube.com/watch?v=udXOGA8wjD8&t=8s',
 
         }
         response = self.client.post(url, data=data)
@@ -97,13 +97,12 @@ class LessonTestCase(APITestCase):
         )
 
     def test_lesson_create(self):
-        # url = reverse("materials:lesson_list")
         data = {
             'title': 'Test Lesson 2',
             'description': 'Test Lesson 2',
             'course': self.course.pk,
             'owner': self.user.pk,
-            'link': 'youtube.com'
+            'link': 'https://www.youtube.com/watch?v=udXOGA8wjD8&t=8s'
         }
         response = self.client.post('/lesson/create/', data=data)
         print(response.json())
