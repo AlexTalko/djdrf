@@ -9,8 +9,9 @@ class Course(models.Model):
     image = models.ImageField(upload_to='course/images', verbose_name='картинка',
                               help_text='Добавьте превью изображения', **NULLABLE)
     description = models.TextField(verbose_name='описание курса', help_text='Укажите описание курса')
-    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE, verbose_name="Автор")
-    link = models.URLField(max_length=300, verbose_name="ссылка на видео", help_text="Укажите ссылку", **NULLABLE)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.SET_NULL, **NULLABLE, verbose_name='Автор')
+    link = models.URLField(max_length=300, verbose_name='ссылка на видео', help_text='Укажите ссылку', **NULLABLE)
+    last_update = models.DateTimeField(auto_now=True, verbose_name='Последнее обновление')
 
     def __str__(self):
         return self.title

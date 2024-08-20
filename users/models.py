@@ -1,5 +1,6 @@
 from django.contrib.auth.models import AbstractUser
 from django.db import models
+from django_celery_beat.utils import now
 
 from materials.models import Lesson, Course
 
@@ -17,6 +18,8 @@ class User(AbstractUser):
     avatar = models.ImageField(upload_to='users/avatars/', verbose_name='Аватар', **NULLABLE)
 
     city = models.CharField(max_length=100, verbose_name='Город', help_text='Город', **NULLABLE)
+
+    last_login = models.DateTimeField(default=now, verbose_name='Время последнего посещения')
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
