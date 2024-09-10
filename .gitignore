@@ -1430,3 +1430,4 @@ db_data/
 /pg_data/postgresql.conf
 /pg_data/postmaster.opts
 /pg_data/postmaster.pid
+/pg_data/pg_stat/pgstat.stat
