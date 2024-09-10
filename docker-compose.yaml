@@ -45,6 +45,8 @@ services:
       - app
     env_file:
       - .env
+    environment:
+      - C_FORCE_ROOT=true
 
   celery-beat:
     build: .
@@ -59,6 +61,8 @@ services:
       - app
     env_file:
       - .env
+    environment:
+      - C_FORCE_ROOT=true
 
 volumes:
   pg_data:
